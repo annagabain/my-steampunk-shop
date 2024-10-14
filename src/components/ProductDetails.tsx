@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Product } from "../types/Product";
+import NavBar from "./NavBar";
 import "../App.css"; 
 import "./ProductDetails.css";
 
@@ -39,11 +40,17 @@ const ProductDetails = () => {
   }
 
   return (
+    <div>
+
+    
     <div className="product-details">
       <img src={product.image} alt={product.name} />
       <p>Price: {product.price} sek</p>
       <h3>{product.name}</h3>
       <p>{product.description}</p>
+    </div>
+    <NavBar/>
+
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Product } from "../types/Product";
 import { Link } from "react-router-dom";
+import NavBar from "./NavBar";
 import "./ProductList.css"; 
 
 const ProductList  = () => {
@@ -41,6 +42,7 @@ const ProductList  = () => {
           </div>
         ))}
       </div>
+      <NavBar/>
     </div>
   );
 };
