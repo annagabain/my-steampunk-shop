@@ -31,7 +31,7 @@ const Cart = () => {
                     ))}
                 </ul>
                 <p>Total Price: {totalPrice} sek</p>
-                {/* <button onClick={clearCart}>Clear Cart</button> */}
+                <button onClick={clearCart}>Clear Cart</button>
                 <button className='button-white'>Update Address</button>
 
                 <Link to="/checkout"><button>Pay now</button></Link>
