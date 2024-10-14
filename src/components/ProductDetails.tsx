@@ -1,12 +1,23 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Product } from "../types/Product";
 import "../App.css"; 
+import "./ProductDetails.css";
 
 
-const ProductDetails: React.FC = () => {
+const ProductDetails = () => {
   const { id } = useParams<{ id: string }>();
   const [product, setProduct] = useState<Product | undefined>(undefined);
+
+  useEffect(() => {
+    // Add the 'product-details-body' class to the body element
+    document.body.classList.add("product-details-body");
+
+    // Clean up by removing the class when the component unmounts
+    return () => {
+      document.body.classList.remove("product-details-body");
+    };
+  }, []);
 
   useEffect(() => {
     fetch("/my-steampunk-shop/data/products.json") 
@@ -29,10 +40,10 @@ const ProductDetails: React.FC = () => {
 
   return (
     <div className="product-details">
-      <h2>{product.name}</h2>
       <img src={product.image} alt={product.name} />
-      <p>{product.description}</p>
       <p>Price: {product.price} sek</p>
+      <h3>{product.name}</h3>
+      <p>{product.description}</p>
     </div>
   );
 };

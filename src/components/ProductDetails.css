@@ -1,0 +1,35 @@
+
+/* Product Details Page */
+
+/* Apply Copper Brown background to the entire page */
+body.product-details-body {
+  background-color: var(--olive-green);
+  color: var(--vintage-white);
+}
+
+.product-details {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--vintage-white);
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-details img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.product-details h2 {
+  font-family: 'Arbutus', serif;
+  font-size: 2rem;
+  color: var(--copper-brown);
+}
+
+.product-details p {
+  font-size: 1rem;
+  color: var(--gunmetal-gray);
+  line-height: 1.5;
+}

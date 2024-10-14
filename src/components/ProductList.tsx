@@ -1,11 +1,20 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Product } from "../types/Product";
 import { Link } from "react-router-dom";
-import "../App.css"; 
+import "./ProductList.css"; 
 
-
-const ProductList: React.FC = () => {
+const ProductList  = () => {
   const [products, setProducts] = useState<Product[]>([]);
+
+  useEffect(() => {
+    // Add the 'product-list-body' class to the body element
+    document.body.classList.add("product-list-body");
+
+    // Clean up by removing the class when the component unmounts
+    return () => {
+      document.body.classList.remove("product-list-body");
+    };
+  }, []);
 
   useEffect(() => {
     fetch("/my-steampunk-shop/data/products.json")
@@ -20,16 +29,18 @@ const ProductList: React.FC = () => {
   }, []);
 
   return (
-    <div className="product-list">
-      {products.map((product) => (
-        <div key={product.id} className="product-card">
-          <Link to={`/product/${product.id}`}>
-            <img src={product.image} alt={product.name} />
-            <h2>{product.name}</h2>
-            <p>Price: {product.price} sek</p>
-          </Link>
-        </div>
-      ))}
+    <div className="product-list-container">
+      <div className="product-list">
+        {products.map((product) => (
+          <div key={product.id} className="product-card">
+            <Link to={`/product/${product.id}`}>
+              <img src={product.image} alt={product.name} />
+              <h2>{product.name}</h2>
+              <p>Price: {product.price} sek</p>
+            </Link>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
