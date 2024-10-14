@@ -29,22 +29,6 @@ body {
   padding: 20px;
 }
 
-/* Header Section */
-h1 {
-  font-family: 'Arbutus', serif;
-  font-size: 2.5rem;
-  color: var(--brass-yellow);
-  text-align: center;
-  padding: 20px;
-  background-color: var(--copper-brown);
-  border-bottom: 2px solid var(--brass-yellow);
-}
-
-h3 {
-  font-family: 'Revalia', serif;
-  font-size: 1.8rem;
-  color: var(--copper-brown);
-}
 
 /* Navigation Bar */
 nav {
@@ -56,14 +40,15 @@ nav {
 nav a {
   color: var(--vintage-white);
   text-decoration: none;
-  margin: 0 15px;
-  font-size: 1.1rem;
+  margin: 0 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
   color: var(--brass-yellow);
 }
-
 
 
 

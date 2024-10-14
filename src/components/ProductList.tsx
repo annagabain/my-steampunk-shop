@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Product } from "../types/Product";
 import { Link } from "react-router-dom";
 import NavBar from "./NavBar";
+import ProductListHeader from "./ProductListHeader";
 import "./ProductList.css"; 
 
 const ProductList  = () => {
@@ -31,6 +32,7 @@ const ProductList  = () => {
 
   return (
     <div className="product-list-container">
+      <ProductListHeader />
       <div className="product-list">
         {products.map((product) => (
           <div key={product.id} className="product-card">
