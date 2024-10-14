@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { Product } from "../types/Product";
 import NavBar from "./NavBar";
 import "../App.css"; 
 import "./ProductDetails.css";
-
+import { useCart } from "../context/CartContext";
 
 const ProductDetails = () => {
   const { id } = useParams<{ id: string }>();
   const [product, setProduct] = useState<Product | undefined>(undefined);
+  const { addToCart } = useCart();
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Add the 'product-details-body' class to the body element
@@ -39,18 +41,21 @@ const ProductDetails = () => {
     return <div>Product not found!</div>;
   }
 
+  const handleAddToCart = () => {
+    addToCart(product); // Add product to cart
+    navigate("/cart");  // Navigate to the cart page
+  };
+
   return (
     <div>
-
-    
-    <div className="product-details">
-      <img src={product.image} alt={product.name} />
-      <p>Price: {product.price} sek</p>
-      <h3>{product.name}</h3>
-      <p>{product.description}</p>
-    </div>
-    <NavBar/>
-
+      <div className="product-details">
+        <img src={product.image} alt={product.name} />
+        <p>Price: {product.price} sek</p>
+        <h3>{product.name}</h3>
+        <p>{product.description}</p>
+        <button onClick={handleAddToCart}>Add to Cart</button>
+      </div>
+      <NavBar />
     </div>
   );
 };

@@ -53,7 +53,7 @@ nav a:hover {
 
 
 /* Buttons */
-button,
+
 .product-card a {
   display: inline-block;
   padding: 10px 20px;
@@ -66,9 +66,28 @@ button,
   transition: background-color 0.3s;
 }
 
+button {
+  background-color: var(--copper-brown);
+  color: var(--brass-yellow);
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.button-white {
+  background-color: var(--vintage-white);
+  color: var(--gunmetal-gray);
+  border: 1px solid black;
+}
+
 button:hover,
 .product-card a:hover {
   background-color: var(--brass-yellow);
+  color: var(--copper-brown);
+  border: 1px solid var(--rust-red);
 }
 
 
