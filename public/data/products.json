@@ -8,20 +8,27 @@
   },
   {
     "id": 2,
-    "name": "Steampunk Goggles",
-    "description": "Vintage goggles for steampunk enthusiasts.",
-    "price": 500,
-    "image": "/my-steampunk-shop/images/steampunk-goggles.jpg"
-  },
-  {
-    "id": 3,
     "name": "Steampunk Hat",
     "description": "A stylish steampunk hat.",
     "price": 850,
     "image": "/my-steampunk-shop/images/steampunk-hat.jpg"
   },
   {
+    "id": 3,
+    "name": "Watch Necklace /Brooch",
+    "description": "A stylish multi-purpose necklace.",
+    "price": 450,
+    "image": "/my-steampunk-shop/images/steampunk-necklace-brooch.jpg"
+  },
+  {
     "id": 4,
+    "name": "Leather Bag",
+    "description": "Vintage goggles for steampunk enthusiasts.",
+    "price": 2500,
+    "image": "/my-steampunk-shop/images/steampunk-leather-bag.jpg"
+  },
+  {
+    "id": 5,
     "name": "Steampunk Goggles",
     "description": "Vintage goggles for steampunk enthusiasts.",
     "price": 500,

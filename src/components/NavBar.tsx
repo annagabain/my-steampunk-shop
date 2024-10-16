@@ -4,8 +4,8 @@ import "../App.css"; // Assuming styles are in App.css or relevant file
 const NavBar = () => {
   return (
     <nav>
-      <Link to="/">Home</Link>
-      <Link to="/cart">Cart</Link>
+      <Link to="/"><i className="fa-solid fa-house"></i> Home</Link>
+      <Link to="/cart"><i className="fas fa-shopping-cart"></i> Cart</Link>
       {/* <Link to="/about">About</Link>
       <Link to="/contact">Contact</Link> */}
     </nav>

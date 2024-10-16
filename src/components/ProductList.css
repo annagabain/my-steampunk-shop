@@ -70,6 +70,7 @@
     /* This pushes it to the bottom of the card */
     margin-top: auto;
     text-align: center;
+    padding-bottom: 5px;
   }
 
   /* Product Name */

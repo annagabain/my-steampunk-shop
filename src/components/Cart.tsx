@@ -12,7 +12,15 @@ const Cart = () => {
     const totalPrice = cart.reduce((acc, item) => acc + item.product.price * item.quantity, 0);
 
     if (totalItems === 0) {
-        return <p>Your cart is empty.</p>;
+        return (
+            <>
+                <div className="cart">
+                    <h1>Your cart is empty.</h1>;
+                </div>
+
+                <NavBar />
+            </>
+        );
     }
 
     return (
@@ -37,7 +45,7 @@ const Cart = () => {
                 <Link to="/checkout"><button>Pay now</button></Link>
             </div>
 
-            <NavBar/>
+            <NavBar />
         </div>
     );
 };
