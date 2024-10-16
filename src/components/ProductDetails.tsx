@@ -11,6 +11,9 @@ const ProductDetails = () => {
   const [product, setProduct] = useState<Product | undefined>(undefined);
   const { addToCart } = useCart();
   const navigate = useNavigate();
+  
+  const sizes = ["Adjustable", "Medium", "One Size", "Large", "Standard"]; // Define sizes
+  const [selectedSize, setSelectedSize] = useState(sizes[0]); // Default size
 
   useEffect(() => {
     // Add the 'product-details-body' class to the body element
@@ -42,16 +45,32 @@ const ProductDetails = () => {
   }
 
   const handleAddToCart = () => {
-    addToCart(product); // Add product to cart
+    addToCart({ ...product, size: selectedSize }); // Add product with selected size to cart
     navigate("/cart");  // Navigate to the cart page
+  };
+
+  const handleSizeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedSize(event.target.value); // Update selected size
   };
 
   return (
     <div>
       <div className="product-details">
         <img src={product.image} alt={product.name} />
-        <p>Price: {product.price} sek</p>
-        <h3>{product.name}</h3>
+        <h1 className="big-price">{product.price} <span className="big-price-name">sek</span></h1>
+
+        {/* Size Selection Dropdown */}
+        <div>
+        <label htmlFor="size-select">Select Size: </label>
+        <select id="size-select" value={selectedSize} onChange={handleSizeChange}>
+          {sizes.map((size, index) => (
+            <option key={index} value={size}>{size}</option>
+          ))}
+        </select>  
+        </div>
+        
+
+        <h2>{product.name}</h2>
         <p>{product.description}</p>
         <button onClick={handleAddToCart}>Add to Cart</button>
       </div>
