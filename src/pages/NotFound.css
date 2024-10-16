@@ -1,0 +1,28 @@
+.not-found-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+}
+
+.not-found-content {
+    max-width: 600px;
+
+    h1 {
+        font-family: 'Arbutus', serif;
+        font-size: 2rem;
+        color: var(--rust-red);
+        margin-bottom: 10px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 20px;
+        border-radius: 8px;
+    }
+}

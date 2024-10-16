@@ -26,7 +26,7 @@ const Checkout = () => {
       <h2>Checkout</h2>
       <form onSubmit={(e) => { e.preventDefault(); handleCheckout(); }}>
         <label>
-          Name:
+          Name: 
           <input
             type="text"
             value={name}
@@ -35,7 +35,7 @@ const Checkout = () => {
           />
         </label>
         <label>
-          Address:
+          Address: 
           <input
             type="text"
             value={address}

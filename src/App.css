@@ -104,6 +104,10 @@ button {
   border: 1px solid black;
 }
 
+.button-red {
+  background-color: var(--rust-red)
+}
+
 button:hover,
 .product-card:hover {
   background-color: var(--brass-yellow);
