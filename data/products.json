@@ -4,34 +4,39 @@
     "name": "Alchemist Neck Corset",
     "description": "This choker made of high quality Italian leather is very stylish and comfort for fit even for every day wearing. Handmade custom collar with chain Leash we will make by your measurements for perfect fit. Collection ''Aphrodite''.",
     "price": 1250,
-    "image": "/my-steampunk-shop/images/alchemist-neck-corset.jpg"
+    "image": "/my-steampunk-shop/images/alchemist-neck-corset.jpg",
+    "sizes": "Adjustable"
   },
   {
     "id": 2,
     "name": "Steampunk Hat",
     "description": "A stylish steampunk hat.",
     "price": 850,
-    "image": "/my-steampunk-shop/images/steampunk-hat.jpg"
+    "image": "/my-steampunk-shop/images/steampunk-hat.jpg",
+    "size": "Medium"
   },
   {
     "id": 3,
-    "name": "Watch Necklace /Brooch",
+    "name": "Watch Necklace / Brooch",
     "description": "A stylish multi-purpose necklace.",
     "price": 450,
-    "image": "/my-steampunk-shop/images/steampunk-necklace-brooch.jpg"
+    "image": "/my-steampunk-shop/images/steampunk-necklace-brooch.jpg",
+    "size": "One Size"
   },
   {
     "id": 4,
     "name": "Leather Bag",
     "description": "Vintage goggles for steampunk enthusiasts.",
     "price": 2500,
-    "image": "/my-steampunk-shop/images/steampunk-leather-bag.jpg"
+    "image": "/my-steampunk-shop/images/steampunk-leather-bag.jpg",
+    "size": "Large"
   },
   {
     "id": 5,
     "name": "Steampunk Goggles",
     "description": "Vintage goggles for steampunk enthusiasts.",
     "price": 500,
-    "image": "/my-steampunk-shop/images/steampunk-goggles.jpg"
+    "image": "/my-steampunk-shop/images/steampunk-goggles.jpg",
+    "size": "Standard"
   }
 ]
