@@ -3,9 +3,9 @@ import { Product } from "../types/Product";
 import { Link } from "react-router-dom";
 import NavBar from "./NavBar";
 import ProductListHeader from "./ProductListHeader";
-import "./ProductList.css"; 
+import "./ProductList.css";
 
-const ProductList  = () => {
+const ProductList = () => {
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
@@ -37,14 +37,19 @@ const ProductList  = () => {
         {products.map((product) => (
           <div key={product.id} className="product-card">
             <Link to={`/product/${product.id}`}>
-              <img src={product.image} alt={product.name} />
-              <h2>{product.name}</h2>
-              <p>Price: {product.price} sek</p>
+              <div className="image-container">
+                <img src={product.image} alt={product.name} />
+              </div>
+              <div className="product-name-price-container">
+                <h2>{product.name}</h2>
+                <p>Price: {product.price} sek</p>
+              </div>
+
             </Link>
           </div>
         ))}
       </div>
-      <NavBar/>
+      <NavBar />
     </div>
   );
 };
