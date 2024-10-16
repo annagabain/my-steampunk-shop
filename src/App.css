@@ -84,7 +84,7 @@ button {
 }
 
 button:hover,
-.product-card a:hover {
+.product-card:hover {
   background-color: var(--brass-yellow);
   color: var(--copper-brown);
   border: 1px solid var(--rust-red);
