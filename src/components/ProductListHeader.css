@@ -1,57 +1,59 @@
 /* Product List Header */
 .header {
-    position: relative;
-    text-align: center;
-    padding: 80px 20px;
-    background: url('/images/header-background-image.jpg') no-repeat center/cover;
+  position: relative;
+  text-align: center;
+  padding: 80px 20px 0px 20px;
+  background: url('/images/header-background-image.jpg') no-repeat center/cover;
 }
 
-/* Overlay Effect */
+/* Overlay Effect, The header Background image */
 .header-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* height: 100%; */
+  z-index: 1;
 }
 
 /* Portrait Image */
 .header-portrait {
-    position: relative;
-    z-index: 3;
-    margin-bottom: -50px;
-    /* Overlap with the text container */
-}
+  position: relative;
+  z-index: 3;
+  margin-bottom: -50px;
+  /* Overlap with the text container */
 
-.header-portrait img {
-    width: 300px;  
+  img {
+    width: 300px;
     height: auto;
-    /* border-radius: 50%;    */
-
-    object-fit: cover;  
+    object-fit: cover;
+  }
 }
 
 /* A1 Title (H1) */
 .header-content {
-    position: relative;
-    z-index: 2;
-    padding: 40px;
-    display: inline-block;
-    background-color: rgba(245, 233, 224, 0.85); /* 85% opacity fill */
-    border-radius: 12px;
-  }
-  
-  .header-content h1 {
+  position: relative;
+  z-index: 2;
+  padding: 40px;
+  display: inline-block;
+  /* 85% opacity fill */
+  background-color: rgba(245, 233, 224, 0.85);
+  border-radius: 5px 5px 0 0;
+  /*cloudy edges */
+  box-shadow: 0px -10px 10px 15px rgba(245, 233, 224, 0.85);
+
+
+  h1 {
     font-family: 'Arbutus', serif;
     font-size: 3rem;
     color: var(--rust-red);
     margin-bottom: 10px;
   }
-  
+
   /* A3 Subheading */
-  .header-content h3 {
+  h3 {
     font-family: 'Revalia', serif;
     font-size: 1.8rem;
     color: var(--deep-teal)
   }
+}
