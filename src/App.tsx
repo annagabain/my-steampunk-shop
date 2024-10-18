@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import { HashRouter as Router, Route, Routes } from "react-router-dom";
+
 import ProductList from "./components/ProductList";
 import ProductDetails from "./components/ProductDetails";
 import { CartProvider } from "./context/CartContext";
@@ -11,6 +13,8 @@ const App  = () => {
   return (
     <CartProvider>
     <Router basename="/my-steampunk-shop/"> 
+    {/* <Router>  */}
+
       <div className="App">
         <Routes>
           <Route path="/" element={<ProductList />} />
