@@ -45,9 +45,11 @@ const Cart = () => {
                     ))}
                 </ul>
 
-                <p>Total Price: {totalPrice} sek</p>
+                <h3>Total Price: {totalPrice} sek</h3>
 
                 <section className='proceed-to-payment-area'>
+                <Link to="/"><button>Add producs</button></Link>
+
                     <button className='button-red' onClick={clearCart}>Clear Cart</button>
 
                     {/* <button className='button-white'>Update Address</button> */}
