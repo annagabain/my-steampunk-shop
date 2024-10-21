@@ -7,8 +7,8 @@ interface CartItem {
 }
 
 interface UpdateItemFields {
-  quantity?: number; // Optional
-  size?: string; // Optional
+  quantity?: number; 
+  size?: string; 
 }
 
 interface CartContextType {
@@ -16,7 +16,7 @@ interface CartContextType {
   addToCart: (product: Product) => void;
   removeFromCart: (id: number) => void;
   clearCart: () => void;
-  updateItem: (productId: number, updatedFields: UpdateItemFields) => void; // Ensure this is declared
+  updateItem: (productId: number, updatedFields: UpdateItemFields) => void;
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -26,28 +26,47 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
 
   const addToCart = (product: Product) => {
     setCart((prevCart) => {
-      const existingItem = prevCart.find((item) => item.product.id === product.id);
+      // Check if a cart item exists with the same product ID and size
+      const existingItem = prevCart.find(
+        (item) => item.product.id === product.id && item.product.size === product.size
+      );
+  
       if (existingItem) {
+        // If an item with the same ID and size exists, increase the quantity
         return prevCart.map((item) =>
-          item.product.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+          item.product.id === product.id && item.product.size === product.size
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
         );
       }
+  
+      // If no existing item with the same ID and size, add new item
       return [...prevCart, { product, quantity: 1 }];
     });
   };
+  
 
-  const updateItem = (productId: number, updatedFields: { size?: string; quantity?: number }) => {
-    setCart(prevCart => {
-        const newCart = prevCart.map(item =>
-            item.product.id === productId
-                ? { ...item, ...updatedFields }
-                : item
-        );
-        console.log(newCart); // Check the new cart state here
-        return newCart;
-    });
+
+
+const updateItem = (productId: number, updatedFields: { size?: string; quantity?: number }) => {
+  setCart(prevCart =>
+    prevCart.map(item => {
+      if (item.product.id === productId) {
+       
+        const updatedProduct = { 
+          ...item.product, 
+          size: updatedFields.size ? updatedFields.size : item.product.size 
+        };
+        return { 
+          ...item, 
+          product: updatedProduct, 
+          quantity: updatedFields.quantity !== undefined ? updatedFields.quantity : item.quantity 
+        };
+      }
+      return item;
+    })
+  );
 };
-
 
 
   const removeFromCart = (id: number) => {
@@ -56,7 +75,7 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
 
   const clearCart = () => setCart([]);
 
-  // Ensure updateItem is included in the value provided to the context
+  
   return (
     <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart, updateItem }}>
       {children}

@@ -41,9 +41,7 @@ body.product-details-body {
 }
 
 .product-details h2 {
-  /* font-family: 'Arbutus', serif; */
   font-size: 2rem;
-  /* color: var(--copper-brown); */
 }
 
 .product-details p {

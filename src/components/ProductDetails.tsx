@@ -47,12 +47,12 @@ const ProductDetails = () => {
   }
 
   const handleAddToCart = () => {
-    addToCart({ ...product, size: selectedSize }); // Add product with selected size to cart
-    navigate("/cart");  // Navigate to the cart page
+    addToCart({ ...product, size: selectedSize }); 
+    navigate("/cart");  
   };
 
   const handleSizeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedSize(event.target.value); // Update selected size
+    setSelectedSize(event.target.value); 
   };
 
   return (
@@ -65,8 +65,8 @@ const ProductDetails = () => {
         <div>
           <label htmlFor="size-select">Select Size: </label>
           <select id="size-select" value={selectedSize} onChange={handleSizeChange}>
-            {/* {sizes.map((size, index) => ( */}
 
+            {/* {sizes.map((size, index) => ( */}
             {product.availableSizes.map((size, index) => (
               <option key={index} value={size}>{size}</option>
             ))}

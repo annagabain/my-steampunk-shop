@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../App.css"; // Assuming styles are in App.css or relevant file
+import "../App.css"; 
 
 const NavBar = () => {
   return (

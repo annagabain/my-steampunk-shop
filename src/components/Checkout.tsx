@@ -14,7 +14,7 @@ const Checkout = () => {
   const handleCheckout = () => {
     console.log('Order placed:', { name, address, cart });
     clearCart();
-    navigate('/');  // Redirect after checkout
+    navigate('/');  
   };
 
   if (cart.length === 0) {

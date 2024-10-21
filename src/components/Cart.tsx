@@ -6,7 +6,7 @@ import NavBar from './NavBar';
 import Checkout from './Checkout';
 
 const Cart = () => {
-    const { cart, removeFromCart, clearCart, updateItem } = useCart(); // Import updateItem here
+    const { cart, removeFromCart, clearCart, updateItem } = useCart(); 
 
     const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
     const totalPrice = cart.reduce((acc, item) => acc + item.product.price * item.quantity, 0);
@@ -29,7 +29,7 @@ const Cart = () => {
     };
 
     const handleQuantityChange = (productId: number, newQuantity: number) => {
-        updateItem(productId, { quantity: newQuantity }); // Update quantity in the context
+        updateItem(productId, { quantity: newQuantity }); 
     };
 
     return (
