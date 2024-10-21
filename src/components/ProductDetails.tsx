@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Product } from "../types/Product";
 import NavBar from "./NavBar";
-import "../App.css"; 
+import "../App.css";
 import "./ProductDetails.css";
 import { useCart } from "../context/CartContext";
 
@@ -11,9 +11,11 @@ const ProductDetails = () => {
   const [product, setProduct] = useState<Product | undefined>(undefined);
   const { addToCart } = useCart();
   const navigate = useNavigate();
-  
-  const sizes = ["Adjustable", "Medium", "One Size", "Large", "Standard"]; // Define sizes
-  const [selectedSize, setSelectedSize] = useState(sizes[0]); // Default size
+
+  // const sizes = ["Adjustable", "Medium", "One Size", "Large", "Standard"]; 
+  // const [selectedSize, setSelectedSize] = useState(sizes[0]); 
+
+  const [selectedSize, setSelectedSize] = useState<string>("");
 
   useEffect(() => {
     // Add the 'product-details-body' class to the body element
@@ -26,7 +28,7 @@ const ProductDetails = () => {
   }, []);
 
   useEffect(() => {
-    fetch("/my-steampunk-shop/data/products.json") 
+    fetch("/my-steampunk-shop/data/products.json")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -61,14 +63,16 @@ const ProductDetails = () => {
 
         {/* Size Selection Dropdown */}
         <div>
-        <label htmlFor="size-select">Select Size: </label>
-        <select id="size-select" value={selectedSize} onChange={handleSizeChange}>
-          {sizes.map((size, index) => (
-            <option key={index} value={size}>{size}</option>
-          ))}
-        </select>  
+          <label htmlFor="size-select">Select Size: </label>
+          <select id="size-select" value={selectedSize} onChange={handleSizeChange}>
+            {/* {sizes.map((size, index) => ( */}
+
+            {product.availableSizes.map((size, index) => (
+              <option key={index} value={size}>{size}</option>
+            ))}
+          </select>
         </div>
-        
+
 
         <h2>{product.name}</h2>
         <p>{product.description}</p>
