@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import { HashRouter as Router, Route, Routes } from "react-router-dom";
 
-import ProductList from "./components/ProductList";
+import ProductList from "./pages/ProductList";
 import ProductDetails from "./pages/ProductDetails";
 import { CartProvider } from "./context/CartContext";
 import Cart from "./pages/Cart";

@@ -6,7 +6,7 @@ import NavBar from '../components/NavBar';
 import Checkout from '../components/Checkout';
 
 const Cart = () => {
-    const { cart, removeFromCart, clearCart, updateItem } = useCart(); 
+    const { cart, removeFromCart, clearCart, updateItem } = useCart();
 
     const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
     const totalPrice = cart.reduce((acc, item) => acc + item.product.price * item.quantity, 0);
@@ -30,7 +30,7 @@ const Cart = () => {
     };
 
     const handleQuantityChange = (productId: number, newQuantity: number) => {
-        updateItem(productId, { quantity: newQuantity }); 
+        updateItem(productId, { quantity: newQuantity });
     };
 
     return (
@@ -40,39 +40,50 @@ const Cart = () => {
                 <ul>
                     {cart.map(({ product, quantity }) => (
                         <li key={product.id}>
-                            <img src={product.image} alt={product.name} />
-                            <h3>{product.name}</h3>
-                            <p>
-                                Size:
-                                <select
-                                    value={product.size}
-                                    onChange={(e) => handleSizeChange(product.id, e.target.value)}
-                                >
-                                    {product.availableSizes.map(size => (
-                                        <option key={size} value={size}>{size}</option>
-                                    ))}
-                                </select>
-                            </p>
-                            <p>
-                                Quantity:
-                                <select
-                                    value={quantity}
-                                    onChange={(e) => handleQuantityChange(product.id, parseInt(e.target.value))}
-                                >
-                                    {[...Array(10).keys()].map(num => (
-                                        <option key={num + 1} value={num + 1}>{num + 1}</option>
-                                    ))}
-                                </select>
-                            </p>
-                            <p>Price: {product.price} sek</p>
-                            <button className='button-red' onClick={() => removeFromCart(product.id)}>
-                                <i className="fa-solid fa-trash"></i>
-                            </button>
+                            <div className='column-1'>
+                                <img src={product.image} alt={product.name} />
+
+                            </div>
+
+
+                            <div className='column-2'>
+                                <h3>{product.name}</h3>
+                                <p>
+                                    Size:
+                                    <select
+                                        value={product.size}
+                                        onChange={(e) => handleSizeChange(product.id, e.target.value)}
+                                    >
+                                        {product.availableSizes.map(size => (
+                                            <option key={size} value={size}>{size}</option>
+                                        ))}
+                                    </select>
+                                </p>
+                                <p>
+                                    Quantity:
+                                    <select
+                                        value={quantity}
+                                        onChange={(e) => handleQuantityChange(product.id, parseInt(e.target.value))}
+                                    >
+                                        {[...Array(10).keys()].map(num => (
+                                            <option key={num + 1} value={num + 1}>{num + 1}</option>
+                                        ))}
+                                    </select>
+                                </p>
+                            </div>
+                            <div className='column-3'>
+                                <p>{product.price} sek</p>
+                                <button className='button-red' onClick={() => removeFromCart(product.id)}>
+                                    <i className="fa-solid fa-trash"></i>
+                                </button>
+
+                            </div>
+
                         </li>
                     ))}
                 </ul>
 
-                <h3>Total Price: {totalPrice} sek</h3>
+                <p className='total-price-container'>Total Price: <span className='total-price'> {totalPrice} sek</span></p>
 
                 <section className='proceed-to-payment-area'>
                     <Link to="/"><button>Continue shopping</button></Link>

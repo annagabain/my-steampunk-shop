@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Product } from "../types/Product";
 import { Link } from "react-router-dom";
-import NavBar from "./NavBar";
-import ProductListHeader from "./ProductListHeader";
+import NavBar from "../components/NavBar";
+import ProductListHeader from "../components/ProductListHeader";
 import "./ProductList.css";
 
 const ProductList = () => {

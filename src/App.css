@@ -1,6 +1,7 @@
 :root {
   --copper-brown: #7C4D2A;
   --brass-yellow: #D8A76B;
+  --contrast-yellow: #F1D3AB;
   --olive-green: #7C7B39;
   --deep-teal: #2B4C4F;
   --rust-red: #A44A3F;
@@ -89,7 +90,7 @@ nav a:hover {
 
 button {
   background-color: var(--copper-brown);
-  color: var(--brass-yellow);
+  color: var(--contrast-yellow);
   display: inline-block;
   padding: 10px 20px;
   text-decoration: none;
