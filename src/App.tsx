@@ -2,11 +2,11 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import { HashRouter as Router, Route, Routes } from "react-router-dom";
 
 import ProductList from "./components/ProductList";
-import ProductDetails from "./components/ProductDetails";
+import ProductDetails from "./pages/ProductDetails";
 import { CartProvider } from "./context/CartContext";
-import Cart from "./components/Cart";
+import Cart from "./pages/Cart";
 import Checkout from "./components/Checkout";
-import NotFound from "./pages/404";
+import NotFound from "./pages/NotFound";
 
 
 const App  = () => {

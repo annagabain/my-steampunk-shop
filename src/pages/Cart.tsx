@@ -2,8 +2,8 @@ import { useCart } from '../context/CartContext';
 import { Link } from 'react-router-dom';
 import '../App.css';
 import './Cart.css';
-import NavBar from './NavBar';
-import Checkout from './Checkout';
+import NavBar from '../components/NavBar';
+import Checkout from '../components/Checkout';
 
 const Cart = () => {
     const { cart, removeFromCart, clearCart, updateItem } = useCart(); 
@@ -14,8 +14,9 @@ const Cart = () => {
     if (totalItems === 0) {
         return (
             <>
-                <div className="cart">
+                <div className="empty-cart">
                     <h1>Your cart is empty.</h1>
+                    <img className='empty-cart' src="/my-steampunk-shop/images/steampunk-empty-cart.png" alt="Steampunk empty cart" />
                     <Link to="/"><button>Add products</button></Link>
                 </div>
                 <NavBar />

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Product } from "../types/Product";
-import NavBar from "./NavBar";
+import NavBar from "../components/NavBar";
 import "../App.css";
 import "./ProductDetails.css";
 import { useCart } from "../context/CartContext";
