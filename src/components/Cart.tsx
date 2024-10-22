@@ -74,7 +74,7 @@ const Cart = () => {
                 <h3>Total Price: {totalPrice} sek</h3>
 
                 <section className='proceed-to-payment-area'>
-                    <Link to="/"><button>Add products</button></Link>
+                    <Link to="/"><button>Continue shopping</button></Link>
                     <button className='button-red' onClick={clearCart}>Clear Cart</button>
                 </section>
                 <p>or</p>
