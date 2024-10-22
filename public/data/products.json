@@ -43,5 +43,95 @@
     "image": "/my-steampunk-shop/images/steampunk-goggles.jpg",
     "size": "Standard",
     "availableSizes": ["S", "M", "L", "Standard"]
+  },
+  {
+    "id": 6,
+    "name": "Mechanical Wristwatch",
+    "description": "An intricately designed steampunk wristwatch with visible gears.",
+    "price": 1200,
+    "image": "/my-steampunk-shop/images/steampunk-image-placeholder.png",
+    "size": "M",
+    "availableSizes": ["S", "M", "L"]
+  },
+  {
+    "id": 7,
+    "name": "Steampunk Leather Gloves",
+    "description": "Stylish leather gloves with brass accents and buckles.",
+    "price": 700,
+    "image": "/my-steampunk-shop/images/steampunk-leather-gloves.jpg",
+    "size": "L",
+    "availableSizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "id": 8,
+    "name": "Victorian Steampunk Coat",
+    "description": "Elegant Victorian-style coat with steampunk flair.",
+    "price": 3200,
+    "image": "/my-steampunk-shop/images/steampunk-coat.jpg",
+    "size": "XL",
+    "availableSizes": ["M", "L", "XL"]
+  },
+  {
+    "id": 9,
+    "name": "Steampunk Pocket Compass",
+    "description": "A vintage pocket compass with intricate steampunk designs.",
+    "price": 600,
+    "image": "/my-steampunk-shop/images/steampunk-pocket-compass.jpg",
+    "size": "OS",
+    "availableSizes": ["OS"]
+  },
+  {
+    "id": 10,
+    "name": "Brass Steampunk Earrings",
+    "description": "Elegant earrings crafted with brass gears and tiny clocks.",
+    "price": 400,
+    "image": "/my-steampunk-shop/images/steampunk-earrings.jpg",
+    "size": "OS",
+    "availableSizes": ["OS"]
+  },
+  {
+    "id": 11,
+    "name": "Gothic Steampunk Boots",
+    "description": "Sturdy boots with steampunk and gothic design elements.",
+    "price": 1800,
+    "image": "/my-steampunk-shop/images/steampunk-gothic-boots.jpg",
+    "size": "M",
+    "availableSizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "id": 12,
+    "name": "Steampunk Brass Monocle",
+    "description": "A stylish brass monocle with a chain and intricate designs.",
+    "price": 300,
+    "image": "/my-steampunk-shop/images/steampunk-image-placeholder.png",
+    "size": "OS",
+    "availableSizes": ["OS"]
+  },
+  {
+    "id": 13,
+    "name": "Engineer Utility Belt",
+    "description": "A utility belt with multiple pouches, perfect for a steampunk engineer.",
+    "price": 950,
+    "image": "/my-steampunk-shop/images/steampunk-engineer-utility-belt.jpg",
+    "size": "L",
+    "availableSizes": ["M", "L", "XL"]
+  },
+  {
+    "id": 14,
+    "name": "Steampunk Vest",
+    "description": "A classic steampunk vest with brass buttons and chain.",
+    "price": 1000,
+    "image": "/my-steampunk-shop/images/steampunk-vest.jpg",
+    "size": "M",
+    "availableSizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "id": 15,
+    "name": "Retro Steampunk Sunglasses",
+    "description": "Round steampunk sunglasses with tinted lenses and metal frames.",
+    "price": 350,
+    "image": "/my-steampunk-shop/images/steampunk-retro-sunglasses.jpg",
+    "size": "OS",
+    "availableSizes": ["OS"]
   }
 ]
